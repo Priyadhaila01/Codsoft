@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}

@@ -1,23 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import JobListingsPage from './pages/JobListingsPage';
-import JobDetailPage from './pages/JobDetailPage';
-import EmployerDashboard from './pages/EmployerDashboard';
-import CandidateDashboard from './pages/CandidateDashboard';
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const app = express();
 
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/jobs" element={<JobListingsPage />} />
-                <Route path="/jobs/:id" element={<JobDetailPage />} />
-                <Route path="/employer" element={<EmployerDashboard />} />
-                <Route path="/candidate" element={<CandidateDashboard />} />
-            </Routes>
-        </Router>
-    );
-}
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-export default App;
+// Database Connection
+mongoose.connect('mongodb://localhost:27017/blogging-platform', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+// Routes
+const postRoutes = require('./routes/postRoutes');
+const userRoutes = require('./routes/userRoutes');
+
+app.use('/api/posts', postRoutes);
+app.use('/api/users', userRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
