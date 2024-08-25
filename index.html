@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tribute to A.P.J. Abdul Kalam</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
-        <form name="form">
-            <input type="text" name="textview">
-        </form>
-        <table>
-            <tr>
-                <td><button onclick="insert(1)">1</button></td>
-                <td><button onclick="insert(2)">2</button></td>
-                <td><button onclick="insert(3)">3</button></td>
-                <td><button onclick="insert('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert(4)">4</button></td>
-                <td><button onclick="insert(5)">5</button></td>
-                <td><button onclick="insert(6)">6</button></td>
-                <td><button onclick="insert('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert(7)">7</button></td>
-                <td><button onclick="insert(8)">8</button></td>
-                <td><button onclick="insert(9)">9</button></td>
-                <td><button onclick="insert('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="clean()">C</button></td>
-                <td><button onclick="insert(0)">0</button></td>
-                <td><button onclick="equal()">=</button></td>
-                <td><button onclick="insert('/')">/</button></td>
-            </tr>
-            <tr>
-                <td colspan="4"><button onclick="back()">←</button></td>
-            </tr>
-        </table>
-    <script src="script.js"></script>
+    <header>
+        <div class="container">
+            <h1>Tribute to Dr. A.P.J. Abdul Kalam</h1>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <img src="https://www.indiancentury.in/wp-content/uploads/2021/10/APJ.jpeg" alt="A.P.J. Abdul Kalam">
+            <p>Dr. A.P.J. Abdul Kalam, known as the "Missile Man of India," was a renowned scientist and the 11th President of India. He played a pivotal role in India's space and missile programs and was a source of inspiration for millions.</p>
+        </div>
+    </section>
+
+    <section class="qualities">
+        <div class="container">
+            <h2>Admirable Qualities</h2>
+            <ul>
+                <li><strong>Visionary Leadership:</strong> He was known for his visionary leadership and his ability to inspire the youth of India.</li>
+                <li><strong>Dedication to Science:</strong> His contributions to India's space and missile programs were groundbreaking.</li>
+                <li><strong>Humility and Simplicity:</strong> Despite his high office, he remained humble and approachable.</li>
+                <li><strong>Passionate Educator:</strong> He spent his post-presidency years teaching and inspiring young minds.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="quote">
+        <div class="container">
+            <blockquote>
+                "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
+            </blockquote>
+            <cite>— Dr. A.P.J. Abdul Kalam</cite>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tribute Page. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
